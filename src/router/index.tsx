@@ -5,6 +5,7 @@ const Router = () => {
     return (
         <Routes>
             <Route path='/' element={<P.Main />} />
+            <Route path='/login' element={<P.Login />} />
         </Routes>
     );
 };
