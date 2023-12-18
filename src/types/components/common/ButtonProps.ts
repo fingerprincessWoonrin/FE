@@ -13,5 +13,5 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   hoverbackground?: string;
   hoverBorder?: string;
   hoverColor?: string;
-  borderRadius?: string;
+  borderradius?: string;
 }

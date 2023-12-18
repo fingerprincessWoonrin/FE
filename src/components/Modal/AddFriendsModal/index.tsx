@@ -29,7 +29,7 @@ const AddFriendsModal: React.FC<AddFriendsModalProps> = ({ closeModal }) => {
           height="10%"
           background="#2260FF"
           color="#fff"
-          borderRadius="0.5625rem"
+          borderradius="0.5625rem"
         >
           친구추가하기
         </S.AddFriendsButton>
