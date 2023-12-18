@@ -1,13 +1,13 @@
 import Router from "./router";
 import { Global } from "./styles/Globalstyle";
-import * as C from "./components";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
     <>
       <Global />
-      
       <Router />
+      <ToastContainer />
     </>
   );
 }
