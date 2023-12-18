@@ -7,6 +7,7 @@ const Router = () => {
       <Route path="/" element={<P.Main />} />
       <Route path="/login" element={<P.Login />} />
       <Route path="/signup" element={<P.SignUp />} />
+      <Route path="/friend" element={<P.Friends />} />
     </Routes>
   );
 };
