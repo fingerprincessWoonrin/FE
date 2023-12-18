@@ -1,6 +1,6 @@
 import axios from "axios";
 import { getRefresh } from "./getRefresh";
-const API = axios.create({
+export const API = axios.create({
   baseURL: "baseurl",
   withCredentials: true,
 });
