@@ -6,8 +6,7 @@ function App() {
   return (
     <>
       <Global />
-      <C.Header />
-      <C.LeftBar />
+      
       <Router />
     </>
   );
