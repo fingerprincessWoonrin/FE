@@ -12,6 +12,7 @@ export const LoginContainer = styled.div`
 export const LoginWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
 `;
 
 export const LoginTitle = styled.h2`
@@ -24,7 +25,6 @@ export const LoginTitle = styled.h2`
   line-height: normal;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
 `;
 
 export const RememberBox = styled.div`

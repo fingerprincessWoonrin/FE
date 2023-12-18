@@ -1,64 +1,77 @@
 import styled from "styled-components";
 
-export const Header = styled.header`
+export const Header = styled.header<{ pathname: string }>`
   width: 100%;
-  background-color: #fff;
+  height: 6.3rem;
+  background-color: #ffffff;
   box-shadow: 0px 2px 4px rgba(204, 204, 204, 0.25);
+  display: ${({ pathname }) =>
+    pathname.includes("login") || pathname.includes("signup")
+      ? "none"
+      : "flex"};
+  align-items: center;
 `;
 
 export const LogoBox = styled.div`
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 6.3rem;
 `;
 
-export const HeaderItem = styled.div`
-  position: absolute;
+export const HeaderLeft = styled.div`
+  border-right: 1px solid #e3e3e3;
+  width: 18.75rem;
+  height: 100%;
+  padding: 1.2rem 1.5rem;
 `;
 
-export const HeaderLine = styled.div`
-  position: absolute;
-  left: 80%;
-  right: 10%;
-  top: 0.2%;
-  bottom: 100%;
-  border: 1px solid #e3e3e3;
-  transform: rotate(90deg);
+export const TextBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 `;
 
-export const UserName = styled.p`
-  position: absolute;
-  left: 86.3%;
-  right: 10%;
-  top: 2.5%;
-  bottom: 96.71%;
-
-  font-family: "Inter";
-  font-style: normal;
+export const Title = styled.h2`
+  font-size: 30px;
   font-weight: 600;
-  font-size: 2.2rem;
-  line-height: 36px;
 `;
 
-export const Date = styled.p`
-  position: absolute;
-  left: 86.3%;
-  right: 10%;
-  top: 6.2%;
-  bottom: 95.51%;
-
-  font-family: "Inter";
-  font-style: normal;
+export const Description = styled.span`
+  font-size: 15px;
   font-weight: 400;
-  font-size: 1rem;
-  line-height: 18px;
+`;
 
-  color: #6c6c6c;
+export const HeaderRight = styled.div`
+  display: flex;
+  align-items: flex-start;
+  border-left: 1px solid #e3e3e3;
+  height: 100%;
+  justify-content: space-between;
+  width: 18.75rem;
+  margin-left: 50rem;
+`;
+
+export const InformationBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-top: 1.2rem;
+  margin-left: 1.2rem;
+`;
+
+export const UserName = styled.h2`
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+`;
+
+export const Date = styled.span`
+  font-size: 15px;
+  font-weight: 400;
 `;
 
 export const CategoryBox = styled.div`
-  position: absolute;
-  left: 97.6%;
-  right: 2%;
-  top: 4%;
-  bottom: 96.43%;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  cursor: pointer;
 `;

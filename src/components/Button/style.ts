@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { ButtonProps } from '../../types/components/common/ButtonProps'
+import styled from "styled-components";
+import { ButtonProps } from "../../types/components/common/ButtonProps";
 
 export const Button = styled.button<ButtonProps>`
   width: ${(props) => props.width};
@@ -11,7 +11,7 @@ export const Button = styled.button<ButtonProps>`
   border: ${(props) => props.border};
   border-radius: ${(props) => props.borderRadius};
   &:hover {
-    background: ${(props) => props.hoverBackground};
+    background: ${(props) => props.hoverbackground};
     border: ${(props) => props.hoverBorder};
     color: ${(props) => props.hoverColor};
   }
@@ -20,4 +20,4 @@ export const Button = styled.button<ButtonProps>`
   outline: none;
   cursor: pointer;
   cursor: pointer;
-`
+`;
