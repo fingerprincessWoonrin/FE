@@ -23,7 +23,7 @@ const AddFriendsModal: React.FC<AddFriendsModalProps> = ({ closeModal }) => {
         <S.Title>친구추가하기</S.Title>
         <S.SearchBar placeholder="추가할 친구 이름을 적으세요" />
 
-        {/* <S.Error>존재하지 않는 계정입니다.</S.Error> */}
+        <S.Error>존재하지 않는 계정입니다.</S.Error> 
         <S.AddFriendsButton
           width="100%"
           height="10%"

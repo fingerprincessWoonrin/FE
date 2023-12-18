@@ -5,7 +5,6 @@ import React from "react";
 
 const FriendsList = () => {
   return (
-    <>
       <S.MemberListContainer>
         <S.Profile>
           <I.profile />
@@ -15,7 +14,6 @@ const FriendsList = () => {
           <I.deletes />
         </S.DeleteWrapper>
       </S.MemberListContainer>
-    </>
   );
 };
 
