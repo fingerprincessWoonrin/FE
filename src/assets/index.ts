@@ -13,3 +13,6 @@ export { default as commentIcon } from "./commentIcon";
 export { default as settingIcon } from "./settingIcon";
 export { default as addIcon } from "./addIcon";
 export { default as filterArrow } from "./filterArrow";
+export { default as add } from "./add";
+export { default as profile } from "./profile";
+export { default as deletes } from "./deletes";
