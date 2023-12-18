@@ -13,8 +13,8 @@ const add = () => {
       <path
         d="M26.7745 37.8V15.75M37.7995 26.775H15.7495"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );
