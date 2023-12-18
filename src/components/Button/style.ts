@@ -9,7 +9,7 @@ export const Button = styled.button<ButtonProps>`
   font-size: ${(props) => props.fontSize};
   font-weight: ${(props) => props.fontWeight};
   border: ${(props) => props.border};
-  border-radius: ${(props) => props.borderRadius};
+  border-radius: ${(props) => props.radius};
   &:hover {
     background: ${(props) => props.hoverbackground};
     border: ${(props) => props.hoverBorder};
