@@ -1,4 +1,4 @@
-export { default as Main } from "./Main";
+export { default as Schedule } from "./Schedule";
 export { default as Login } from "./Login";
 export { default as SignUp } from "./SignUp";
 export { default as Friends } from "./Friends";
