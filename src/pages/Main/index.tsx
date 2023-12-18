@@ -1,11 +1,7 @@
-import * as C from '../../components'
+import * as C from "../../components";
 
 const Main = () => {
-    return (
-        <div>
-            <C.Header />
-        </div>
-    );
+  return <></>;
 };
 
 export default Main;

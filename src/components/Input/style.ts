@@ -7,13 +7,16 @@ export const Input = styled.input<InputProps>`
   border-radius: 0.1875rem;
   background: #fff;
   border: none;
-
-  font-family: Pretendard;
   font-size: 1.125rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   padding: 20px;
+  outline: none;
 
-  margin-bottom: 10px;
+  &::placeholder {
+    color: #c4c3c3;
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
 `;
