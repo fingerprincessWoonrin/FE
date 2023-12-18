@@ -15,7 +15,7 @@ export const LeftBarContainer = styled.div`
   align-items: center;
   gap: 6rem;
   height: 37.5rem;
-  margin-top: 5rem;
+  margin-top: 15rem;
 
   svg {
     cursor: pointer;
