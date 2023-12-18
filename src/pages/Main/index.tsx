@@ -1,7 +1,12 @@
 import * as C from "../../components";
 
 const Main = () => {
-  return <></>;
+  return (
+    <>
+      <C.Header />
+      <C.LeftBar />
+    </>
+  );
 };
 
 export default Main;
