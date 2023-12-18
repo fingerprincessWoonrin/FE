@@ -9,3 +9,6 @@ export { default as menuSchedule } from "./menuSchedule";
 export { default as menuCalendar } from "./menuCalendar";
 export { default as menuFriend } from "./menuFriend";
 export { default as menuGroup } from "./menuGroup";
+export { default as add } from "./add";
+export { default as profile } from "./profile";
+export { default as deletes } from "./deletes";
