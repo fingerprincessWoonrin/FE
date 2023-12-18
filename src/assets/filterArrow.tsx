@@ -12,9 +12,9 @@ const filterArrow = () => {
       <path
         d="M1.75 1.5L8 7.75L14.25 1.5"
         stroke="#D4D4D4"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
