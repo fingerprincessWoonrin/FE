@@ -45,13 +45,6 @@ const SignUp = () => {
           </label>
         </S.CertificateBox>
         <C.Input
-          value={verificationCode}
-          onChange={handleVerificationCodeChange}
-          height="3.125rem"
-          width="22.5rem"
-          placeholder="인증번호"
-        />
-        <C.Input
           value={password}
           onChange={handlePasswordChange}
           height="3.125rem"
