@@ -2,17 +2,15 @@ import styled from "styled-components";
 
 export const FriendsContainer = styled.div`
   width: 100vw;
-  height: 80vh;
-
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 2rem;
 `;
 
 export const FriendListContainer = styled.div`
-  width: 40rem;
-  height: 38rem;
-
+  width: 38rem;
+  height: 36rem;
   border-radius: 0.9375rem;
   background: #fff;
   overflow: scroll;
