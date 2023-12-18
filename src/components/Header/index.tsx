@@ -18,7 +18,7 @@ const Header = () => {
       </S.HeaderLeft>
       <S.HeaderRight>
         <S.InformationBox>
-          <S.UserName>USER</S.UserName>
+          <S.UserName>이운린</S.UserName>
           <S.Date>{`
             ${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}
           `}</S.Date>

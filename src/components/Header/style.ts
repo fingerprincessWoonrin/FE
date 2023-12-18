@@ -10,6 +10,8 @@ export const Header = styled.header<{ pathname: string }>`
       ? "none"
       : "flex"};
   align-items: center;
+  position: fixed;
+  z-index: 999;
 `;
 
 export const LogoBox = styled.div`
@@ -47,7 +49,7 @@ export const HeaderRight = styled.div`
   height: 100%;
   justify-content: space-between;
   width: 18.75rem;
-  margin-left: 50rem;
+  margin-left: 68rem;
 `;
 
 export const InformationBox = styled.div`
