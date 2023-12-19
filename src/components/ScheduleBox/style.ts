@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Checkbox } from "../SignUp/style";
+import { Checkbox } from "../../pages/SignUp/style";
 
 export const ScheduleWrapper = styled.div`
   display: flex;
@@ -157,14 +157,13 @@ export const ScheduleTimeText = styled.span`
   margin-left: 1rem;
 `;
 
-export const ScheduleTitleListBox = styled.ul`
+export const ScheduleTitleListBox = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: #000000;
   font-size: 1.125rem;
   font-weight: 400;
-  list-style: none;
   margin-top: 0.8rem;
   margin-left: 1rem;
 `;
