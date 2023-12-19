@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ProfilePageContainer = styled.div`
   width: 100vw;
   padding-top: 10rem;
-
   display: flex;
   align-items: center;
   justify-content: center;

@@ -1,9 +1,9 @@
 import React from "react";
 
-type ProfileProps = {
+interface ProfileProps {
   width: string;
   height: string;
-};
+}
 
 const profile = ({ width, height }: ProfileProps) => {
   return (

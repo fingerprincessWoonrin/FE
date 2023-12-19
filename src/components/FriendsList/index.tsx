@@ -1,7 +1,5 @@
-import * as C from "../../components";
-import * as S from "./style";
 import * as I from "../../assets";
-import React from "react";
+import * as S from "./style";
 
 const FriendsList = () => {
   return (

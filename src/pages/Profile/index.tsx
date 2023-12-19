@@ -6,10 +6,6 @@ const Profile = () => {
   const [editMode, setEditMode] = useState(false);
   const [name, setName] = useState("USER");
 
-  const handleEditClick = () => {
-    setEditMode(true);
-  };
-
   const handleInputChange = (e: any) => {
     setName(e.target.value);
   };
@@ -23,7 +19,7 @@ const Profile = () => {
   return (
     <S.ProfilePageContainer>
       <S.ProfileContainer>
-        <S.EditButtonWrapper onClick={handleEditClick}>
+        <S.EditButtonWrapper onClick={() => setEditMode(true)}>
           <I.editButton />
         </S.EditButtonWrapper>
         <S.ProfileWrapper>

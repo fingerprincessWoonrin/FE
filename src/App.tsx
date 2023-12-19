@@ -1,8 +1,8 @@
 import { IsModal } from "./atoms";
 import Router from "./router";
 import { Global } from "./styles/Globalstyle";
-import * as C from "./components";
 import { useRecoilValue } from "recoil";
+import * as C from "./components";
 
 function App() {
   const isModal = useRecoilValue(IsModal);
