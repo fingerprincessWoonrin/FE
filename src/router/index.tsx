@@ -10,6 +10,7 @@ const Router = () => {
       <Route path="/signup" element={<P.SignUp />} />
       <Route path="/friend" element={<P.Friends />} />
       <Route path="*" element={<P.NotFound />} />
+      <Route path="/profile" element={<P.Profile />} />
     </Routes>
   );
 };

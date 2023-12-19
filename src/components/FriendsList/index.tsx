@@ -5,15 +5,15 @@ import React from "react";
 
 const FriendsList = () => {
   return (
-      <S.MemberListContainer>
-        <S.Profile>
-          <I.profile />
-          <S.Name>김철중</S.Name>
-        </S.Profile>
-        <S.DeleteWrapper>
-          <I.deletes />
-        </S.DeleteWrapper>
-      </S.MemberListContainer>
+    <S.MemberListContainer>
+      <S.Profile>
+        <I.profile width="50" height="50" />
+        <S.Name>김철중</S.Name>
+      </S.Profile>
+      <S.DeleteWrapper>
+        <I.deletes />
+      </S.DeleteWrapper>
+    </S.MemberListContainer>
   );
 };
 
