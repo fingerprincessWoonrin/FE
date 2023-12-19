@@ -1,39 +1,24 @@
 import styled from "styled-components";
-import * as C from "../../../components";
-
-export const Main = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-
-  background: rgba(25, 25, 25, 0.3);
-`;
+import * as C from "../../components";
 
 export const ModalContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: flex-start; 
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 29px;
-  width: 24.875rem;
-  height: 35rem;
+  width: 24rem;
+  height: 28rem;
   flex-shrink: 0;
   background-color: #fff;
-  border-radius: 0.9375rem;
+  border-radius: 0.5625rem;
   background: #fff;
 `;
 
 export const Title = styled.h2`
-  font-family: Pretendard;
   font-size: 1.5rem;
   font-weight: 600;
-  margin-bottom: 1rem; 
+  margin-bottom: 1rem;
 `;
 
 export const SearchBar = styled.input`
@@ -43,17 +28,23 @@ export const SearchBar = styled.input`
   border-radius: 0.5625rem;
   box-shadow: 0px 0px 4px 0px rgba(112, 144, 176, 0.25);
   background: #fff;
-
   margin-top: 1rem;
   padding: 4px;
+  padding-left: 20px;
+  outline: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+
+  &::placeholder {
+    font-size: 1rem;
+    font-weight: 500;
+  }
 `;
 
 export const Error = styled.div`
   color: #ff3120;
-  font-family: Pretendard;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 400;
-
   margin-top: 1rem;
   margin-left: 0.5rem;
 `;

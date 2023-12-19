@@ -1,5 +1,5 @@
 import styled from "styled-components";
-export const NotFoundCotainer = styled.div`
+export const NotFoundContainer = styled.div`
   height: 775px;
   display: flex;
   align-items: center;
