@@ -33,7 +33,7 @@ const CalendarComponent = ({
         formatDay={(_locale, date) =>
           date.toLocaleString("en", { day: "numeric" })
         }
-        calendarType="US"
+        calendarType="gregory"
       />
     </div>
   );

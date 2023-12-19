@@ -1,16 +1,16 @@
-import { AddScheduleTitle, XIcon } from "../page1/style";
-import * as S from "./style";
-import * as I from "../../../assets";
-import Portal from "../../../portal";
-import useModal from "../../../hooks/useModal";
 import { ChangeEvent, useState } from "react";
-import { CalendarComponent } from "../../../components";
-import { useSetRecoilState, useResetRecoilState, useRecoilValue } from "recoil";
+import { useRecoilValue, useResetRecoilState, useSetRecoilState } from "recoil";
+import * as I from "../../../assets";
 import {
   ScheduleObject,
   ScheduleObjectTypes,
   SchedulePage,
 } from "../../../atoms";
+import { CalendarComponent } from "../../../components";
+import useModal from "../../../hooks/useModal";
+import Portal from "../../../portal";
+import { AddScheduleTitle, XIcon } from "../page1/style";
+import * as S from "./style";
 
 const AddScheduleModalPage2 = ({
   setSchedule,
@@ -33,11 +33,20 @@ const AddScheduleModalPage2 = ({
 
   const onAdd = () => {
     const storedArr = localStorage.getItem("schedules");
-
     const parseArr = storedArr ? JSON.parse(storedArr) : [];
+    const lastId = parseArr.length > 0 ? parseArr[parseArr.length - 1].id : 0;
+    const newId = lastId + 1;
+    const combinedObject = {
+      ...scheduleObject,
+      id: newId,
+      date: date,
+      startTime: `${startHour.toString()}/${startMinutes.toString()}`,
+      endTime: `${endHour.toString()}/${endMinutes.toString()}`,
+      content: content,
+    };
     localStorage.setItem(
       "schedules",
-      JSON.stringify([...parseArr, scheduleObject])
+      JSON.stringify([...parseArr, combinedObject])
     );
     closeModal();
     setSchedulePage(1);
@@ -53,7 +62,7 @@ const AddScheduleModalPage2 = ({
       }}
     >
       <S.AddScheduleModalPage2Container>
-        <AddScheduleTitle>일정 추가하기+</AddScheduleTitle>
+        <AddScheduleTitle>일정 추가하기 +</AddScheduleTitle>
         <XIcon
           onClick={() => {
             resetSchedule();

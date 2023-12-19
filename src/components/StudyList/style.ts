@@ -30,4 +30,5 @@ export const DeleteWrapper = styled.span`
   display: flex;
   align-items: center;
   margin-right: 3rem;
+  cursor: pointer;
 `;

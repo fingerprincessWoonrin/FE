@@ -1,12 +1,13 @@
-import * as S from "./style";
-import * as C from "../../components";
+import { useState } from "react";
 import * as I from "../../assets";
 import { ScheduleObjectTypes } from "../../atoms";
-import { useState } from "react";
+import * as C from "../../components";
+import * as S from "./style";
 
 const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
   const [date, setDate] = useState<Date>(new Date());
   const [isCalendar, setIsCalendar] = useState<boolean>(false);
+
   return (
     <S.ScheduleBox>
       <S.ScheduleInfoBox>
@@ -27,16 +28,22 @@ const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
             .toString()
             .padStart(2, "0")}`}
         </span>
-        <div onClick={() => setIsCalendar((prev) => !prev)}>
+        <div
+          onClick={() => {
+            setIsCalendar((prev) => !prev);
+          }}
+        >
           <I.menuCalendar />
         </div>
       </S.ScheduleDateBox>
       {isCalendar && <C.CalendarComponent date={date} setDate={setDate} />}
       <S.ScheduleTimeText>
-        {item.startTime.split("/")[0].padStart(2, "0")}:
-        {item.startTime.split("/")[1].padStart(2, "0")} ~
-        {item.endTime.split("/")[0].padStart(2, "0")}:
-        {item.endTime.split("/")[1].padStart(2, "0")}
+        {item.startTime && item.endTime
+          ? `${item.startTime.split("/")[0].padStart(2, "0")}:
+    ${item.startTime.split("/")[1].padStart(2, "0")} ~
+    ${item.endTime.split("/")[0].padStart(2, "0")}:
+    ${item.endTime.split("/")[1].padStart(2, "0")}`
+          : " "}
       </S.ScheduleTimeText>
       <S.ScheduleTitleListBox>{item.content}</S.ScheduleTitleListBox>
       <S.ScheduleCommentBox>

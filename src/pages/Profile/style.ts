@@ -18,7 +18,7 @@ export const ProfileContainer = styled.div`
 export const EditButtonWrapper = styled.div`
   display: flex;
   justify-content: right;
-
+  cursor: pointer;
   margin-top: 1rem;
   margin-right: 1rem;
 `;
@@ -52,6 +52,7 @@ export const Email = styled.div`
   font-size: 1.25rem;
   font-weight: 400;
   text-decoration-line: underline;
+  cursor: pointer;
 `;
 
 export const AccountOption = styled.div`
@@ -66,6 +67,7 @@ export const Logout = styled.div`
   font-weight: 400;
   text-decoration-line: underline;
   margin-right: 2rem;
+  cursor: pointer;
 `;
 
 export const DeleteAccount = styled.div`
@@ -73,4 +75,5 @@ export const DeleteAccount = styled.div`
   font-size: 1.25rem;
   font-weight: 400;
   text-decoration-line: underline;
+  cursor: pointer;
 `;

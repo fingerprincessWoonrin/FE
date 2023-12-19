@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import * as I from "../../assets";
 import * as S from "./style";
 
@@ -18,10 +18,12 @@ const Header = () => {
       </S.HeaderLeft>
       <S.HeaderRight>
         <S.InformationBox>
-          <S.UserName>이운린</S.UserName>
+          <Link to="/profile">
+            <S.UserName>이운린</S.UserName>
+          </Link>
           <S.Date>{`
             ${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}
-          `}</S.Date>
+            `}</S.Date>
         </S.InformationBox>
         <S.CategoryBox>
           <I.Category />
