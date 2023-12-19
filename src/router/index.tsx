@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import * as P from "../pages";
-import * as C from "../components";
 
 const Router = () => {
   return (
