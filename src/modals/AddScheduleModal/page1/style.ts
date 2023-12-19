@@ -45,18 +45,14 @@ export const AddSubjectBox = styled.div`
     background: none;
     padding-left: 0.5rem;
   }
+`;
 
-  div {
-    width: 1.875rem;
-    height: 2.2rem;
-    margin-top: 0.3rem;
-    border-radius: 0.1875rem;
-    background-image: url(${addSubjectColor});
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    cursor: pointer;
-  }
+export const ColorBox = styled.div<{ color: string }>`
+  width: 1.875rem;
+  height: 2rem;
+  border-radius: 0.1875rem;
+  cursor: pointer;
+  background-color: ${({ color }) => color};
 `;
 
 export const AddScheduleModalPage1ButtonContainer = styled.div`
