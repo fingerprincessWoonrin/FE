@@ -50,7 +50,7 @@ export const AddSubjectBox = styled.div`
 export const ColorBox = styled.div<{ color: string }>`
   width: 1.875rem;
   height: 2rem;
-  border-radius: 0.1875rem;
+  border-radius: 50%;
   cursor: pointer;
   background-color: ${({ color }) => color};
 `;
@@ -76,8 +76,8 @@ export const AddScheduleModalPage1ButtonContainer = styled.div`
 
 export const SkipButton = styled.div`
   background: none;
-  border: 2px solid #000000;
-  color: #000000;
+  border: 1px solid #bcbcbc;
+  color: #bcbcbc;
 `;
 
 export const NextButton = styled.div`
