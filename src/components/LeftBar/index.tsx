@@ -12,7 +12,7 @@ const LeftBar = () => {
         <Link to="/friend">
           <I.menuFriend />
         </Link>
-        <Link to="/grounp">
+        <Link to="/group">
           <I.menuGroup />
         </Link>
       </S.LeftBarContainer>
