@@ -33,10 +33,12 @@ const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
       </S.ScheduleDateBox>
       {isCalendar && <C.CalendarComponent date={date} setDate={setDate} />}
       <S.ScheduleTimeText>
-        {item.startTime.split("/")[0].padStart(2, "0")}:
-        {item.startTime.split("/")[1].padStart(2, "0")} ~
-        {item.endTime.split("/")[0].padStart(2, "0")}:
-        {item.endTime.split("/")[1].padStart(2, "0")}
+        {item.startTime && item.endTime
+          ? `${item.startTime.split("/")[0].padStart(2, "0")}:
+    ${item.startTime.split("/")[1].padStart(2, "0")} ~
+    ${item.endTime.split("/")[0].padStart(2, "0")}:
+    ${item.endTime.split("/")[1].padStart(2, "0")}`
+          : " "}
       </S.ScheduleTimeText>
       <S.ScheduleTitleListBox>{item.content}</S.ScheduleTitleListBox>
       <S.ScheduleCommentBox>
