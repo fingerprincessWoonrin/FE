@@ -56,6 +56,7 @@ export const FilterBox = styled.div`
   margin-top: 1.2rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
 `;
 
 export const Filter = styled.div`
