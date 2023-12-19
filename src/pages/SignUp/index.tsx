@@ -3,25 +3,63 @@ import * as S from "./style";
 import * as C from "../../components";
 import * as I from "../../assets";
 import { Link } from "react-router-dom";
+
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [verificationCode, setVerificationCode] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleEmailChange = (e: any) => {
+    setEmail(e.target.value);
+  };
+
+  const handleVerificationCodeChange = (e: any) => {
+    setVerificationCode(e.target.value);
+  };
+
+  const handlePasswordChange = (e: any) => {
+    setPassword(e.target.value);
+  };
+
+  const handleConfirmPasswordChange = (e: any) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleSignUp = () => {};
+
   return (
     <S.SignUpWrapper>
       <S.SignUpContainer>
         <S.SignUpTitle>회원가입</S.SignUpTitle>
         <S.CertificateBox>
-          <C.Input height="3.125rem" width="18.3125rem" placeholder="이메일" />
+          <C.Input
+            value={email}
+            onChange={handleEmailChange}
+            height="3.125rem"
+            width="18.3125rem"
+            placeholder="이메일"
+          />
           <label htmlFor="checkbox">
             <S.Checkbox type="checkbox" id="checkbox" />
           </label>
         </S.CertificateBox>
-        <C.Input height="3.125rem" width="22.5rem" placeholder="인증번호" />
-        <C.Input height="3.125rem" width="22.5rem" placeholder="비밀번호" />
         <C.Input
+          value={password}
+          onChange={handlePasswordChange}
+          height="3.125rem"
+          width="22.5rem"
+          placeholder="비밀번호"
+        />
+        <C.Input
+          value={confirmPassword}
+          onChange={handleConfirmPasswordChange}
           height="3.125rem"
           width="22.5rem"
           placeholder="비밀번호 확인"
         />
         <C.Button
+          onClick={handleSignUp}
           width="22.5rem"
           height="3.125rem"
           radius="0.1875rem"

@@ -22,7 +22,7 @@ export const SignUpTitle = styled.h2`
 export const CertificateBox = styled.div`
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 `;
 
 export const Checkbox = styled.input`
