@@ -4,9 +4,15 @@ import * as I from "../../assets";
 import { ScheduleObjectTypes } from "../../atoms";
 import { useState } from "react";
 
+interface storedArrType {
+  date: string;
+}
+
 const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
   const [date, setDate] = useState<Date>(new Date());
   const [isCalendar, setIsCalendar] = useState<boolean>(false);
+  const storedDate = localStorage.getItem("date");
+
   return (
     <S.ScheduleBox>
       <S.ScheduleInfoBox>
@@ -27,7 +33,12 @@ const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
             .toString()
             .padStart(2, "0")}`}
         </span>
-        <div onClick={() => setIsCalendar((prev) => !prev)}>
+        <div
+          onClick={() => {
+            setIsCalendar((prev) => !prev);
+            console.log(storedDate);
+          }}
+        >
           <I.menuCalendar />
         </div>
       </S.ScheduleDateBox>
