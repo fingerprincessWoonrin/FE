@@ -3,7 +3,6 @@ export { default as Bell } from "./bell";
 export { default as Calender } from "./calender";
 export { default as Category } from "./category";
 export { default as check } from "./check";
-
 export { default as filledcheck } from "./filledcheck";
 export { default as menuSchedule } from "./menuSchedule";
 export { default as menuCalendar } from "./menuCalendar";
@@ -18,3 +17,5 @@ export { default as add } from "./add";
 export { default as profile } from "./profile";
 export { default as deletes } from "./deletes";
 export { default as editButton } from "./editButton";
+export { default as x } from "./x";
+export { default as selectArrow } from "./selectArrow";

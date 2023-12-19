@@ -37,14 +37,14 @@ export const Text = styled.div`
 export const AddWrapper = styled.span`
   margin-top: 1rem;
   margin-right: 2rem;
+  cursor: pointer;
 `;
 
-export const Nofriends = styled.div`
+export const AddFriendsText = styled.div`
   color: #000;
   font-family: Inter;
   font-size: 1.1rem;
   font-weight: 400;
-
   margin-top: 2.5rem;
   margin-left: 1.5rem;
 `;

@@ -3,10 +3,13 @@ import * as I from "../../assets";
 import * as S from "./style";
 import * as C from "../../components";
 import "react-calendar/dist/Calendar.css";
+import useModal from "../../hooks/useModal";
+import AddScheduleModal from "../../modals/AddScheduleModal";
 
 const Schedule = () => {
   const [date, setDate] = useState(new Date());
   const [isCalendar, setIsCalendar] = useState(false);
+  const { openModal } = useModal();
   return (
     <S.ScheduleWrapper>
       <S.ScheduleContainer>
@@ -39,7 +42,9 @@ const Schedule = () => {
         </S.ScheduleFilterBox>
         <S.ScheduleListContainer>
           <S.AddScheduleBox>
-            <I.addScheduleIcon />
+            <div onClick={() => openModal(<AddScheduleModal />)}>
+              <I.addScheduleIcon />
+            </div>
             <S.AddTextBox>
               <span>Add</span>
               <span>Schedule</span>
