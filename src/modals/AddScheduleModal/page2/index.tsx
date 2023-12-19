@@ -83,7 +83,7 @@ const AddScheduleModalPage2 = ({
                   setStartHour(+e.target.value);
                   setSchedule((prev) => ({
                     ...prev,
-                    startTime: startHour.toString() + startMinutes.toString(),
+                    startTime: `${startHour.toString()}/${startMinutes.toString()}`,
                   }));
                 }}
                 maxLength={2}
@@ -103,7 +103,7 @@ const AddScheduleModalPage2 = ({
                   setStartMinutes(+e.target.value);
                   setSchedule((prev) => ({
                     ...prev,
-                    startTime: startHour.toString() + startMinutes.toString(),
+                    startTime: `${startHour.toString()}/${startMinutes.toString()}`,
                   }));
                 }}
                 maxLength={2}
@@ -116,7 +116,7 @@ const AddScheduleModalPage2 = ({
                   setEndHour(+e.target.value);
                   setSchedule((prev) => ({
                     ...prev,
-                    endTime: endHour.toString() + endMinutes.toString(),
+                    endTime: `${endHour.toString()}/${endMinutes.toString()}`,
                   }));
                 }}
                 maxLength={2}
@@ -136,7 +136,7 @@ const AddScheduleModalPage2 = ({
                   setEndMinutes(+e.target.value);
                   setSchedule((prev) => ({
                     ...prev,
-                    endTime: endHour.toString() + endMinutes.toString(),
+                    endTime: `${endHour.toString()}/${endMinutes.toString()}`,
                   }));
                 }}
                 maxLength={2}

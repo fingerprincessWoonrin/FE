@@ -6,3 +6,4 @@ export { default as CalendarComponent } from "./CalendarComponent";
 export { default as FriendsList } from "./FriendsList";
 export { default as AddFriendsModal } from "../modals/AddFriendsModal";
 export { default as StudyList } from "./StudyList";
+export { default as ScheduleBox } from "./ScheduleBox";
