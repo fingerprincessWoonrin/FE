@@ -33,11 +33,19 @@ const AddScheduleModalPage2 = ({
 
   const onAdd = () => {
     const storedArr = localStorage.getItem("schedules");
-
     const parseArr = storedArr ? JSON.parse(storedArr) : [];
+    const lastId = parseArr.length > 0 ? parseArr[parseArr.length - 1].id : 0;
+    const newId = lastId + 1;
+    const newScheduleObject = {
+      id: newId,
+      date: date,
+      startTime: `${startHour.toString()}/${startMinutes.toString()}`,
+      endTime: `${endHour.toString()}/${endMinutes.toString()}`,
+      content: content,
+    };
     localStorage.setItem(
       "schedules",
-      JSON.stringify([...parseArr, scheduleObject])
+      JSON.stringify([...parseArr, newScheduleObject])
     );
     closeModal();
     setSchedulePage(1);
