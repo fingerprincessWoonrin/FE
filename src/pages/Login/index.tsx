@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, useState } from "react";
 import * as C from "../../components";
 import * as S from "./style";
 import * as I from "../../assets";
@@ -6,12 +6,30 @@ import { Link } from "react-router-dom";
 
 const Login = () => {
   const [checked, setChecked] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
   return (
     <S.LoginContainer>
       <S.LoginWrapper>
         <S.LoginTitle>로그인</S.LoginTitle>
-        <C.Input width="22.5rem" height=" 3.125rem" placeholder="이메일" />
-        <C.Input width="22.5rem" height=" 3.125rem" placeholder="비밀번호" />
+        <C.Input
+          value={email}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            setEmail(e.target.validationMessage)
+          }
+          width="22.5rem"
+          height=" 3.125rem"
+          placeholder="이메일"
+        />
+        <C.Input
+          value={password}
+          onChange={(e: ChangeEvent<HTMLInputElement>) =>
+            setPassword(e.target.validationMessage)
+          }
+          width="22.5rem"
+          height=" 3.125rem"
+          placeholder="비밀번호"
+        />
         <S.RememberBox
           onClick={() => {
             setChecked(!checked);

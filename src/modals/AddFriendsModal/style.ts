@@ -29,8 +29,8 @@ export const SearchBar = styled.input`
   box-shadow: 0px 0px 4px 0px rgba(112, 144, 176, 0.25);
   background: #fff;
   margin-top: 1rem;
-  padding: 4px;
-  padding-left: 20px;
+  padding: 0.25rem;
+  padding-left: 1.25rem;
   outline: none;
   font-size: 1.3rem;
   font-weight: 500;

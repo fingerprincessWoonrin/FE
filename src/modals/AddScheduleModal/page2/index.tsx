@@ -1,14 +1,22 @@
-import { AddScheduleTitle, NextButton, XIcon } from "../page1/style";
+import { AddScheduleTitle, XIcon } from "../page1/style";
 import * as S from "./style";
 import * as I from "../../../assets";
 import Portal from "../../../portal";
 import useModal from "../../../hooks/useModal";
 import { ChangeEvent, useState } from "react";
 import { CalendarComponent } from "../../../components";
-import { useSetRecoilState } from "recoil";
-import { SchedulePage } from "../../../atoms";
+import { useSetRecoilState, useResetRecoilState, useRecoilValue } from "recoil";
+import {
+  ScheduleObject,
+  ScheduleObjectTypes,
+  SchedulePage,
+} from "../../../atoms";
 
-const AddScheduleModalPage2 = () => {
+const AddScheduleModalPage2 = ({
+  setSchedule,
+}: {
+  setSchedule: React.Dispatch<React.SetStateAction<ScheduleObjectTypes>>;
+}) => {
   const { closeModal } = useModal();
   const setSchedulePage = useSetRecoilState(SchedulePage);
   const [date, setDate] = useState<Date>(new Date());
@@ -20,9 +28,26 @@ const AddScheduleModalPage2 = () => {
   const [endMinutes, setEndMinutes] = useState<number>(new Date().getMinutes());
   const [isCalendar, setIsCalendar] = useState<boolean>(false);
   const [content, setContent] = useState<string>("");
+  const resetSchedule = useResetRecoilState(ScheduleObject);
+  const scheduleObject = useRecoilValue(ScheduleObject);
+
+  const onAdd = () => {
+    const storedArr = localStorage.getItem("schedules");
+
+    const parseArr = storedArr ? JSON.parse(storedArr) : [];
+    localStorage.setItem(
+      "schedules",
+      JSON.stringify([...parseArr, scheduleObject])
+    );
+    closeModal();
+    setSchedulePage(1);
+    resetSchedule();
+  };
+
   return (
     <Portal
       onClose={() => {
+        resetSchedule();
         setSchedulePage(1);
         closeModal();
       }}
@@ -31,6 +56,7 @@ const AddScheduleModalPage2 = () => {
         <AddScheduleTitle>일정 추가하기+</AddScheduleTitle>
         <XIcon
           onClick={() => {
+            resetSchedule();
             setSchedulePage(1);
             closeModal();
           }}
@@ -53,9 +79,13 @@ const AddScheduleModalPage2 = () => {
             <S.SelectBox style={{ width: "4.3rem", paddingLeft: "0.7rem" }}>
               <input
                 value={startHour}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setStartHour(+e.target.value)
-                }
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                  setStartHour(+e.target.value);
+                  setSchedule((prev) => ({
+                    ...prev,
+                    startTime: startHour.toString() + startMinutes.toString(),
+                  }));
+                }}
                 maxLength={2}
               />
               <span
@@ -69,18 +99,26 @@ const AddScheduleModalPage2 = () => {
               </span>
               <input
                 value={startMinutes}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setStartMinutes(+e.target.value)
-                }
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                  setStartMinutes(+e.target.value);
+                  setSchedule((prev) => ({
+                    ...prev,
+                    startTime: startHour.toString() + startMinutes.toString(),
+                  }));
+                }}
                 maxLength={2}
               />
             </S.SelectBox>
             <S.SelectBox style={{ width: "4.3rem", paddingLeft: "0.7rem" }}>
               <input
                 value={endHour}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setEndHour(+e.target.value)
-                }
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                  setEndHour(+e.target.value);
+                  setSchedule((prev) => ({
+                    ...prev,
+                    endTime: endHour.toString() + endMinutes.toString(),
+                  }));
+                }}
                 maxLength={2}
               />
               <span
@@ -94,9 +132,13 @@ const AddScheduleModalPage2 = () => {
               </span>
               <input
                 value={endMinutes}
-                onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                  setEndMinutes(+e.target.value)
-                }
+                onChange={(e: ChangeEvent<HTMLInputElement>) => {
+                  setEndMinutes(+e.target.value);
+                  setSchedule((prev) => ({
+                    ...prev,
+                    endTime: endHour.toString() + endMinutes.toString(),
+                  }));
+                }}
                 maxLength={2}
               />
             </S.SelectBox>
@@ -105,21 +147,18 @@ const AddScheduleModalPage2 = () => {
             <span>내용</span>
             <S.ScheduleContent
               value={content}
-              onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
-                setContent(e.target.value)
-              }
+              onChange={(e: ChangeEvent<HTMLTextAreaElement>) => {
+                setContent(e.target.value);
+                setSchedule((prev) => ({
+                  ...prev,
+                  content,
+                }));
+              }}
               maxLength={45}
             />
           </S.ScheduleDetailBox>
         </S.ScheduleDetailContainer>
-        <S.AddButton
-          onClick={() => {
-            setSchedulePage(1);
-            closeModal();
-          }}
-        >
-          추가하기
-        </S.AddButton>
+        <S.AddButton onClick={onAdd}>추가하기</S.AddButton>
       </S.AddScheduleModalPage2Container>
     </Portal>
   );

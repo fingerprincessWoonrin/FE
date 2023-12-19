@@ -1,9 +1,9 @@
 import { IsModal } from "./atoms";
 import Router from "./router";
 import { Global } from "./styles/Globalstyle";
-import { ToastContainer } from "react-toastify";
 import { useRecoilValue } from "recoil";
 import * as C from "./components";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const isModal = useRecoilValue(IsModal);
