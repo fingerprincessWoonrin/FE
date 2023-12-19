@@ -53,7 +53,7 @@ const AddScheduleModalPage2 = ({
       }}
     >
       <S.AddScheduleModalPage2Container>
-        <AddScheduleTitle>일정 추가하기+</AddScheduleTitle>
+        <AddScheduleTitle>일정 추가하기</AddScheduleTitle>
         <XIcon
           onClick={() => {
             resetSchedule();

@@ -34,7 +34,7 @@ export const SelectBox = styled.div`
   border: 1px solid #bcbcbc;
   display: flex;
   align-items: center;
-
+  cursor: pointer;
   span {
     font-size: 0.75rem;
     font-weight: 400;
