@@ -16,5 +16,6 @@ export { default as filterArrow } from "./filterArrow";
 export { default as add } from "./add";
 export { default as profile } from "./profile";
 export { default as deletes } from "./deletes";
+export { default as editButton } from "./editButton";
 export { default as x } from "./x";
 export { default as selectArrow } from "./selectArrow";
