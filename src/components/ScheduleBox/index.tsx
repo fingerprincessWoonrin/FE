@@ -1,15 +1,12 @@
-import * as S from "./style";
-import * as C from "../../components";
-import * as I from "../../assets";
-import { ScheduleObject, ScheduleObjectTypes } from "../../atoms";
 import { useState } from "react";
-import { useRecoilValue } from "recoil";
+import * as I from "../../assets";
+import { ScheduleObjectTypes } from "../../atoms";
+import * as C from "../../components";
+import * as S from "./style";
 
 const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
   const [date, setDate] = useState<Date>(new Date());
   const [isCalendar, setIsCalendar] = useState<boolean>(false);
-  const storedDate = localStorage.getItem("date");
-  const scheduleObject = useRecoilValue(ScheduleObject);
 
   return (
     <S.ScheduleBox>
@@ -34,8 +31,6 @@ const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
         <div
           onClick={() => {
             setIsCalendar((prev) => !prev);
-            console.log(storedDate);
-            console.log(scheduleObject);
           }}
         >
           <I.menuCalendar />

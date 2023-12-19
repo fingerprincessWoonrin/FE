@@ -1,15 +1,15 @@
-import * as S from "./style";
+import React, { ChangeEvent, useState } from "react";
+import { HexColorPicker } from "react-colorful";
+import { useResetRecoilState, useSetRecoilState } from "recoil";
 import * as I from "../../../assets";
-import Portal from "../../../portal";
-import useModal from "../../../hooks/useModal";
-import { useSetRecoilState, useResetRecoilState } from "recoil";
 import {
   ScheduleObject,
   ScheduleObjectTypes,
   SchedulePage,
 } from "../../../atoms";
-import React, { ChangeEvent, useState } from "react";
-import { HexColorPicker } from "react-colorful";
+import useModal from "../../../hooks/useModal";
+import Portal from "../../../portal";
+import * as S from "./style";
 
 const AddScheduleModalPage1 = ({
   setSchedule,
