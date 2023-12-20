@@ -1,10 +1,12 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import * as I from "../../assets";
 import * as S from "./style";
 
 const LeftBar = () => {
+  const { pathname } = useLocation();
+
   return (
-    <S.LeftBarWrapper>
+    <S.LeftBarWrapper pathname={pathname}>
       <S.LeftBarContainer>
         <Link to="/">
           <I.menuSchedule />
