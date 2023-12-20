@@ -8,11 +8,6 @@ interface StudyListProps {
 }
 
 const StudyList: React.FC<StudyListProps> = ({ name, onDelete }) => {
-  const handleDelete = () => {
-    if (onDelete) {
-      onDelete();
-    }
-  };
 
   return (
     <S.StudyListContainer>
@@ -20,7 +15,13 @@ const StudyList: React.FC<StudyListProps> = ({ name, onDelete }) => {
         <I.profile width="50" height="50" />
         <S.Name>{name}</S.Name>
       </S.Profile>
-      <S.DeleteWrapper onClick={handleDelete}>
+      <S.DeleteWrapper
+        onClick={() => {
+          if (onDelete) {
+            onDelete();
+          }
+        }}
+      >
         <I.deletes />
       </S.DeleteWrapper>
     </S.StudyListContainer>
