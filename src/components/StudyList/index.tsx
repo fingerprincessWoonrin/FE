@@ -8,7 +8,6 @@ interface StudyListProps {
 }
 
 const StudyList: React.FC<StudyListProps> = ({ name, onDelete }) => {
-
   return (
     <S.StudyListContainer>
       <S.Profile>
