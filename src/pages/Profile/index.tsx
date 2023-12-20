@@ -3,6 +3,9 @@ import * as S from "./style";
 import * as I from "../../assets";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import * as I from "../../assets";
+import * as S from "./style";
 
 const Profile = () => {
   const [editMode, setEditMode] = useState(false);
@@ -41,10 +44,10 @@ const Profile = () => {
               type="text"
               value={name}
               onChange={handleInputChange}
-              onKeyPress={handleEnterKeyPress}
+              onKeyDown={handleEnterKeyPress}
             />
           ) : (
-            <S.Name>{name}</S.Name>
+            <S.Name>한준</S.Name>
           )}
           <S.Email>s2206@gsm.hs.kr</S.Email>
         </S.ProfileWrapper>

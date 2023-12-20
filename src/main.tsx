@@ -8,7 +8,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <RecoilRoot>
     <BrowserRouter>
       <App />
-      <div id="modal" />
     </BrowserRouter>
   </RecoilRoot>
 );
