@@ -14,7 +14,12 @@ const FriendsList = () => {
     setFriends(storedFriends);
   }, [localStorage.getItem("friend")]);
 
-  
+  const handleDeleteStudy = (index: number) => {
+    const updatedStudies = [...friends];
+    updatedStudies.splice(index, 1);
+    setFriends(updatedStudies);
+    localStorage.setItem("friend", JSON.stringify(updatedStudies));
+  };
   return (
     <>
       {friends.map((item, idx) => (
