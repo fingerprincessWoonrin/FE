@@ -16,7 +16,7 @@ const Profile = () => {
     }
   }, []);
 
-  const handleInputChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
