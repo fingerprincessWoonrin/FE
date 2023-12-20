@@ -18,7 +18,6 @@ const Friends = () => {
           </S.ListHead>
           <S.AddFriendsText>새로운 친구를 추가해 보세요</S.AddFriendsText>
           <C.FriendsList />
-          <C.FriendsList />
         </S.FriendListContainer>
       </S.FriendsContainer>
     </>
