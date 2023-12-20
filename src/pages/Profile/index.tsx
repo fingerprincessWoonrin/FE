@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as S from "./style";
 import * as I from "../../assets";
 import { toast } from "react-toastify";
@@ -7,17 +7,26 @@ import { useNavigate } from "react-router-dom";
 const Profile = () => {
   const [editMode, setEditMode] = useState(false);
   const [name, setName] = useState("USER");
+  const router = useNavigate();
 
-  const handleInputChange = (e: any) => {
+  useEffect(() => {
+    const storedName = localStorage.getItem("userName");
+    if (storedName) {
+      setName(storedName);
+    }
+  }, []);
+
+  const handleInputChange = (e) => {
     setName(e.target.value);
   };
 
-  const handleEnterKeyPress = (e: any) => {
+  const handleEnterKeyPress = (e) => {
     if (e.key === "Enter") {
       setEditMode(false);
+
+      localStorage.setItem("userName", name);
     }
   };
-  const router = useNavigate();
 
   return (
     <S.ProfilePageContainer>
