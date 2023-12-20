@@ -37,6 +37,7 @@ const Login = () => {
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
             setPassword(e.target.value)
           }
+          type="password"
           width="22.5rem"
           height=" 3.125rem"
           placeholder="비밀번호"
