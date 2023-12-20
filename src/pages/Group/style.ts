@@ -13,7 +13,7 @@ export const GroupListContainer = styled.div`
   height: 36rem;
   border-radius: 0.9375rem;
   background: #fff;
-  overflow: scroll;
+  overflow: hidden;
 `;
 
 export const ListHead = styled.div`
