@@ -3,7 +3,8 @@ import Router from "./router";
 import { Global } from "./styles/Globalstyle";
 import { useRecoilValue } from "recoil";
 import * as C from "./components";
-import { ToastContainer } from 'react-toastify';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const isModal = useRecoilValue(IsModal);

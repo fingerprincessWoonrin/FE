@@ -1,0 +1,10 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "한준",
+      "email": "s22073@gsm.hs.kr",
+      "password": "123456789"
+    }
+  ]
+}
