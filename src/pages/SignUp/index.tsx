@@ -1,8 +1,7 @@
-import React, { useState } from "react";
-import * as S from "./style";
-import * as C from "../../components";
-import * as I from "../../assets";
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import * as C from "../../components";
+import * as S from "./style";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");

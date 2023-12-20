@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import * as S from "./style";
-import * as I from "../../assets";
-import { toast } from "react-toastify";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import * as I from "../../assets";
+import * as S from "./style";
 
 const Profile = () => {
   const [editMode, setEditMode] = useState(false);

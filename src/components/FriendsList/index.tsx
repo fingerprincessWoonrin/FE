@@ -1,17 +1,29 @@
 import * as I from "../../assets";
 import * as S from "./style";
 
-const FriendsList = () => {
+interface FriendListProps {
+  name: string;
+  onDelete?: () => void;
+}
+const FriendsList: React.FC<FriendListProps> = ({ name, onDelete }) => {
   return (
-    <S.MemberListContainer>
-      <S.Profile>
-        <I.profile width="50" height="50" />
-        <S.Name>userName</S.Name>
-      </S.Profile>
-      <S.DeleteWrapper>
-        <I.deletes />
-      </S.DeleteWrapper>
-    </S.MemberListContainer>
+    <>
+      <S.MemberListContainer>
+        <S.Profile>
+          <I.profile width="50" height="50" />
+          <S.Name>{name}</S.Name>
+        </S.Profile>
+        <S.DeleteWrapper
+          onClick={() => {
+            if (onDelete) {
+              onDelete();
+            }
+          }}
+        >
+          <I.deletes />
+        </S.DeleteWrapper>
+      </S.MemberListContainer>
+    </>
   );
 };
 

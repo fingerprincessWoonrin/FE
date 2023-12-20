@@ -1,11 +1,10 @@
-import { useState } from "react";
-import * as I from "../../assets";
-import * as S from "./style";
-import * as C from "../../components";
 import "react-calendar/dist/Calendar.css";
+import * as I from "../../assets";
+import { ScheduleObjectTypes } from "../../atoms";
+import * as C from "../../components";
 import useModal from "../../hooks/useModal";
 import AddScheduleModal from "../../modals/AddScheduleModal";
-import { ScheduleObjectTypes } from "../../atoms";
+import * as S from "./style";
 
 const Schedule = () => {
   const { openModal } = useModal();

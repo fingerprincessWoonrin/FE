@@ -5,8 +5,6 @@ import * as C from "../../components";
 import useModal from "../../hooks/useModal";
 import AddStudyModal from "../../modals/AddStudyModal";
 
-interface GroupProps {}
-
 interface Study {
   name: string;
 }
