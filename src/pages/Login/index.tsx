@@ -10,7 +10,15 @@ const Login = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
-  
+  const router = useNavigate();
+  const handleLogin = () => {
+    const user = userJSON.users.find((user) => user.email === email);
+    if (user && user.password === password) {
+      router("/");
+    } else {
+      toast.warning("이메일 또는 비밀번호가 일치하지 않습니다.");
+    }
+  };
   return (
     <S.LoginContainer>
       <S.LoginWrapper>
@@ -51,7 +59,7 @@ const Login = () => {
           fontWeight="400"
           border="none"
           hoverbackground="#2256d8"
-          // onClick={handleLogin}
+          onClick={handleLogin}
         >
           로그인
         </C.Button>

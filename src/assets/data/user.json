@@ -2,14 +2,8 @@
   "users": [
     {
       "id": 1,
-      "name": "김철중",
-      "email": "s2206@gsm.hs.kr",
-      "password": "123456789"
-    },
-    {
-      "id": 2,
       "name": "한준",
-      "email": "jane@example.com",
+      "email": "s22073@gsm.hs.kr",
       "password": "123456789"
     }
   ]
