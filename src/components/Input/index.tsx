@@ -1,17 +1,10 @@
-import React from "react";
-import * as S from "./style";
 import { InputProps } from "../../types/components/common/InputProps";
+import * as S from "./style";
 
-const Input = ({ width, height, placeholder, value, onChange }: InputProps) => {
+const Input = ({ width, height, ...rest }: InputProps) => {
   return (
     <>
-      <S.Input
-        value={value}
-        onChange={onChange}
-        width={width}
-        height={height}
-        placeholder={placeholder}
-      />
+      <S.Input width={width} height={height} {...rest} />
     </>
   );
 };

@@ -31,3 +31,7 @@ export const ScheduleObject = atom<ScheduleObjectTypes>({
     content: "",
   },
 });
+
+export interface FriendObjectTypes {
+  name: string;
+}

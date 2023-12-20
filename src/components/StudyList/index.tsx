@@ -1,14 +1,26 @@
-import * as I from "../../assets";
+import React from "react";
 import * as S from "./style";
+import * as I from "../../assets";
 
-const StudyList = () => {
+interface StudyListProps {
+  name: string;
+  onDelete?: () => void;
+}
+
+const StudyList: React.FC<StudyListProps> = ({ name, onDelete }) => {
   return (
     <S.StudyListContainer>
       <S.Profile>
         <I.profile width="50" height="50" />
-        <S.Name>확통</S.Name>
+        <S.Name>{name}</S.Name>
       </S.Profile>
-      <S.DeleteWrapper>
+      <S.DeleteWrapper
+        onClick={() => {
+          if (onDelete) {
+            onDelete();
+          }
+        }}
+      >
         <I.deletes />
       </S.DeleteWrapper>
     </S.StudyListContainer>

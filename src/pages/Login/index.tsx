@@ -1,13 +1,24 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import * as I from "../../assets";
+import userJSON from "../../assets/data/user.json";
 import * as C from "../../components";
 import * as S from "./style";
-import * as I from "../../assets";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  const router = useNavigate();
+  const handleLogin = () => {
+    const user = userJSON.users.find((user) => user.email === email);
+    if (user && user.password === password) {
+      router("/");
+    } else {
+      toast.warning("이메일 또는 비밀번호가 일치하지 않습니다.");
+    }
+  };
   return (
     <S.LoginContainer>
       <S.LoginWrapper>
@@ -15,7 +26,7 @@ const Login = () => {
         <C.Input
           value={email}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setEmail(e.target.validationMessage)
+            setEmail(e.target.value)
           }
           width="22.5rem"
           height=" 3.125rem"
@@ -24,8 +35,9 @@ const Login = () => {
         <C.Input
           value={password}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setPassword(e.target.validationMessage)
+            setPassword(e.target.value)
           }
+          type="password"
           width="22.5rem"
           height=" 3.125rem"
           placeholder="비밀번호"
@@ -48,6 +60,7 @@ const Login = () => {
           fontWeight="400"
           border="none"
           hoverbackground="#2256d8"
+          onClick={handleLogin}
         >
           로그인
         </C.Button>
