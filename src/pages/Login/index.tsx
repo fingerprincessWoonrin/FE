@@ -2,12 +2,15 @@ import React, { ChangeEvent, useState } from "react";
 import * as C from "../../components";
 import * as S from "./style";
 import * as I from "../../assets";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import userJSON from "../../assets/data/user.json";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [email, setEmail] = useState<string>("");
   const [password, setPassword] = useState<string>("");
+  
   return (
     <S.LoginContainer>
       <S.LoginWrapper>
@@ -15,7 +18,7 @@ const Login = () => {
         <C.Input
           value={email}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setEmail(e.target.validationMessage)
+            setEmail(e.target.value)
           }
           width="22.5rem"
           height=" 3.125rem"
@@ -24,7 +27,7 @@ const Login = () => {
         <C.Input
           value={password}
           onChange={(e: ChangeEvent<HTMLInputElement>) =>
-            setPassword(e.target.validationMessage)
+            setPassword(e.target.value)
           }
           width="22.5rem"
           height=" 3.125rem"
@@ -48,6 +51,7 @@ const Login = () => {
           fontWeight="400"
           border="none"
           hoverbackground="#2256d8"
+          // onClick={handleLogin}
         >
           로그인
         </C.Button>
