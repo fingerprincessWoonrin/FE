@@ -1,5 +1,5 @@
-import { API } from "@/utils/libs";
-import { MemberController } from "@/utils/libs/requestUrls";
+import { API } from "../utils/libs";
+import { MemberController } from "../utils/libs/requestUrls";
 import { toast } from "react-toastify";
 
 export const signup = async (email: string, password: string) => {
