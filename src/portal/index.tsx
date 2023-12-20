@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import {
   cloneElement,
   MouseEvent,
@@ -6,6 +5,7 @@ import {
   useEffect,
   useState,
 } from "react";
+import ReactDOM from "react-dom";
 import styled from "styled-components";
 
 const Portal = ({
