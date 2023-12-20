@@ -29,10 +29,10 @@ const Profile = () => {
               type="text"
               value={name}
               onChange={handleInputChange}
-              onKeyPress={handleEnterKeyPress}
+              onKeyDown={handleEnterKeyPress}
             />
           ) : (
-            <S.Name>{name}</S.Name>
+            <S.Name>한준</S.Name>
           )}
           <S.Email>s2206@gsm.hs.kr</S.Email>
         </S.ProfileWrapper>
