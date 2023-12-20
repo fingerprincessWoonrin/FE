@@ -1,15 +1,16 @@
 import Portal from "../../portal";
 import * as S from "./style";
 import useModal from "../../hooks/useModal";
-import { useState } from "react"; 
+import { useState } from "react";
 
 const AddStudyModal = () => {
   const { closeModal } = useModal();
-  const [studyName, setStudyName] = useState(""); 
+  const [studyName, setStudyName] = useState("");
 
   const handleCreateStudy = () => {
     if (studyName.trim() !== "") {
-      const existingStudies = JSON.parse(localStorage.getItem("studies") ?? "[]") || [];
+      const existingStudies =
+        JSON.parse(localStorage.getItem("studies") ?? "[]") || [];
 
       const newStudy = { name: studyName };
       const updatedStudies = [...existingStudies, newStudy];
@@ -26,8 +27,10 @@ const AddStudyModal = () => {
         <S.Title>스터디만들기</S.Title>
         <S.SearchBar
           placeholder="스터디의 이름을 적으세요"
-          value={studyName} 
-          onChange={(e) => setStudyName(e.target.value)} 
+          value={studyName}
+          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+            setStudyName(e.target.value)
+          }
         />
         <S.AddStudyButton
           width="100%"
