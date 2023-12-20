@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import * as S from "./style";
 import * as I from "../../assets";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const [editMode, setEditMode] = useState(false);
@@ -15,6 +17,7 @@ const Profile = () => {
       setEditMode(false);
     }
   };
+  const router = useNavigate();
 
   return (
     <S.ProfilePageContainer>
@@ -37,7 +40,14 @@ const Profile = () => {
           <S.Email>s2206@gsm.hs.kr</S.Email>
         </S.ProfileWrapper>
         <S.AccountOption>
-          <S.Logout>로그아웃</S.Logout>
+          <S.Logout
+            onClick={() => {
+              toast.success("로그아웃 성공");
+              router("/login");
+            }}
+          >
+            로그아웃
+          </S.Logout>
           <S.DeleteAccount>계정삭제</S.DeleteAccount>
         </S.AccountOption>
       </S.ProfileContainer>
