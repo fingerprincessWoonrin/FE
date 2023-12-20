@@ -5,7 +5,7 @@ import * as C from "../../components";
 import * as S from "./style";
 
 const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
-  const [date, setDate] = useState<Date>(new Date());
+  const [date, setDate] = useState<Date>(new Date(item.date));
   const [isCalendar, setIsCalendar] = useState<boolean>(false);
 
   return (
@@ -19,14 +19,9 @@ const ScheduleBox = ({ item }: { item: ScheduleObjectTypes }) => {
       </S.ScheduleInfoBox>
       <S.ScheduleDateBox>
         <span>
-          {`${new Date(item.date).getFullYear()}-${(
-            new Date(item.date).getMonth() + 1
-          )
+          {`${date.getFullYear()}-${(date.getMonth() + 1)
             .toString()
-            .padStart(2, "0")}-${new Date(item.date)
-            .getDate()
-            .toString()
-            .padStart(2, "0")}`}
+            .padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}`}
         </span>
         <div
           onClick={() => {
