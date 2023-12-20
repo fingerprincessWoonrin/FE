@@ -1,6 +1,6 @@
-import * as S from "./style";
-import * as I from "../../assets";
 import { Link } from "react-router-dom";
+import * as I from "../../assets";
+import * as S from "./style";
 
 const LeftBar = () => {
   return (

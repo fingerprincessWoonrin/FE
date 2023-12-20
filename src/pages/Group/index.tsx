@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import * as S from "./style";
+import { useEffect, useState } from "react";
 import * as I from "../../assets";
 import * as C from "../../components";
 import useModal from "../../hooks/useModal";
 import AddStudyModal from "../../modals/AddStudyModal";
+import * as S from "./style";
 
 interface Study {
   name: string;

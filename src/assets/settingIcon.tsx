@@ -1,5 +1,3 @@
-import React from "react";
-
 const settingIcon = () => {
   return (
     <svg

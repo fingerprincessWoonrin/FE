@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react";
-import * as S from "./style";
-import * as I from "../../assets";
-import { toast } from "react-toastify";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import * as I from "../../assets";
@@ -23,7 +20,7 @@ const Profile = () => {
     setName(e.target.value);
   };
 
-  const handleEnterKeyPress = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEnterKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setEditMode(false);
 
