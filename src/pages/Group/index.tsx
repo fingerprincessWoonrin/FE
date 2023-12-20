@@ -1,9 +1,8 @@
-import React from "react";
-import * as C from "../../components";
-import * as S from "./style";
 import * as I from "../../assets";
+import * as C from "../../components";
 import useModal from "../../hooks/useModal";
 import AddStudyModal from "../../modals/AddStudyModal";
+import * as S from "./style";
 
 const Group = () => {
   const { openModal } = useModal();

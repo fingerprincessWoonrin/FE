@@ -1,11 +1,8 @@
-// Friends.tsx 파일
-
-import * as C from "../../components";
-import * as S from "./style";
 import * as I from "../../assets";
-import React, { useState } from "react";
+import * as C from "../../components";
 import useModal from "../../hooks/useModal";
 import AddFriendsModal from "../../modals/AddFriendsModal";
+import * as S from "./style";
 
 const Friends = () => {
   const { openModal } = useModal();

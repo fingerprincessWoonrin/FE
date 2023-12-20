@@ -1,10 +1,10 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+import * as I from "../../assets";
+import userJSON from "../../assets/data/user.json";
 import * as C from "../../components";
 import * as S from "./style";
-import * as I from "../../assets";
-import { Link, useNavigate } from "react-router-dom";
-import userJSON from "../../assets/data/user.json";
-import { toast } from "react-toastify";
 
 const Login = () => {
   const [checked, setChecked] = useState<boolean>(false);

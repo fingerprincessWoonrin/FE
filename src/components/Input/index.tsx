@@ -1,6 +1,5 @@
-import React from "react";
-import * as S from "./style";
 import { InputProps } from "../../types/components/common/InputProps";
+import * as S from "./style";
 
 const Input = ({ width, height, ...rest }: InputProps) => {
   return (
