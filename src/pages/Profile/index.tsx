@@ -16,11 +16,11 @@ const Profile = () => {
     }
   }, []);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e : React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
-  const handleEnterKeyPress = (e) => {
+  const handleEnterKeyPress = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setEditMode(false);
 
