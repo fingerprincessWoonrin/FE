@@ -13,13 +13,7 @@ const FriendsList: React.FC<FriendListProps> = ({ name, onDelete }) => {
           <I.profile width="50" height="50" />
           <S.Name>{name}</S.Name>
         </S.Profile>
-        <S.DeleteWrapper
-          onClick={() => {
-            if (onDelete) {
-              onDelete();
-            }
-          }}
-        >
+        <S.DeleteWrapper onClick={onDelete}>
           <I.deletes />
         </S.DeleteWrapper>
       </S.MemberListContainer>
