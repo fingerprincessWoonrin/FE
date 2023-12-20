@@ -3,7 +3,7 @@ import * as S from "./style";
 import useModal from "../../hooks/useModal";
 import { useState } from "react"; 
 
-const AddStydyModal = () => {
+const AddStudyModal = () => {
   const { closeModal } = useModal();
   const [studyName, setStudyName] = useState(""); 
 
@@ -47,4 +47,4 @@ const AddStydyModal = () => {
   );
 };
 
-export default AddStydyModal;
+export default AddStudyModal;

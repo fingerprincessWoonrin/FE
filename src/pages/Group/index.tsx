@@ -3,7 +3,7 @@ import * as S from "./style";
 import * as I from "../../assets";
 import * as C from "../../components";
 import useModal from "../../hooks/useModal";
-import AddStydyModal from "../../modals/AddStudyModal";
+import AddStudyModal from "../../modals/AddStudyModal";
 
 interface GroupProps {}
 
@@ -32,7 +32,7 @@ const Group = () => {
       <S.GroupListContainer>
         <S.ListHead>
           <S.Text>스터디 목록</S.Text>
-          <S.AddWrapper onClick={() => openModal(<AddStydyModal />)}>
+          <S.AddWrapper onClick={() => openModal(<AddStudyModal />)}>
             <I.add />
           </S.AddWrapper>
         </S.ListHead>
