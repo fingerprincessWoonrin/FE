@@ -15,6 +15,7 @@ const Login = () => {
     const user = userJSON.users.find((user) => user.email === email);
     if (user && user.password === password) {
       router("/");
+      localStorage.setItem("userName", "한준");
     } else {
       toast.warning("이메일 또는 비밀번호가 일치하지 않습니다.");
     }

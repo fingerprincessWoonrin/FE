@@ -1,15 +1,12 @@
 import React, { useState, useEffect } from "react";
-import * as S from "./style";
-import * as I from "../../assets";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import * as I from "../../assets";
 import * as S from "./style";
 
 const Profile = () => {
   const [editMode, setEditMode] = useState(false);
-  const [name, setName] = useState("USER");
+  const [name, setName] = useState("");
   const router = useNavigate();
 
   useEffect(() => {
@@ -23,11 +20,12 @@ const Profile = () => {
     setName(e.target.value);
   };
 
-  const handleEnterKeyPress = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleEnterKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "Enter") {
       setEditMode(false);
 
       localStorage.setItem("userName", name);
+      window.location.reload();
     }
   };
 
@@ -47,9 +45,9 @@ const Profile = () => {
               onKeyDown={handleEnterKeyPress}
             />
           ) : (
-            <S.Name>한준</S.Name>
+            <S.Name>{name}</S.Name>
           )}
-          <S.Email>s2206@gsm.hs.kr</S.Email>
+          <S.Email>s22073@gsm.hs.kr</S.Email>
         </S.ProfileWrapper>
         <S.AccountOption>
           <S.Logout

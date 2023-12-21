@@ -17,17 +17,8 @@ const Header = () => {
   const date = new Date();
   const { pathname } = useLocation();
   const [userData, setUserData] = useState<IProps | undefined>();
-  useEffect(() => {
-    const json = "src/assets/data/user.json";
-    fetch(json)
-      .then((response) => response.json())
-      .then((data) => {
-        setUserData(data);
-      })
-      .catch((error) => {
-        toast.error("유저 정보를 불러오는데 실패했습니다.");
-      });
-  }, []);
+  const name = localStorage.getItem("userName");
+
   return (
     <S.Header pathname={pathname}>
       <S.LogoBox>
@@ -42,7 +33,7 @@ const Header = () => {
       <S.HeaderRight>
         <S.InformationBox>
           <Link to="/profile">
-            <S.UserName>{userData?.users[0]?.name}</S.UserName>
+            <S.UserName>{name}</S.UserName>
           </Link>
           <S.Date>{`
             ${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}
