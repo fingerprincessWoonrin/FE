@@ -11,6 +11,9 @@ const LeftBar = () => {
         <Link to="/">
           <I.menuSchedule />
         </Link>
+        <Link to="/calendar">
+          <I.Calender />
+        </Link>
         <Link to="/friend">
           <I.menuFriend />
         </Link>
