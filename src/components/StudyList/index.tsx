@@ -1,6 +1,6 @@
 import React from "react";
-import * as S from "./style";
 import * as I from "../../assets";
+import * as S from "./style";
 
 interface StudyListProps {
   name: string;

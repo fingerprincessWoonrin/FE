@@ -1,8 +1,8 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { toast } from "react-toastify";
 import * as I from "../../assets";
 import * as S from "./style";
-import { useEffect, useState } from "react";
-import { toast } from "react-toastify";
 
 interface User {
   id: number;

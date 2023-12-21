@@ -1,7 +1,7 @@
+import { useState } from "react";
+import useModal from "../../hooks/useModal";
 import Portal from "../../portal";
 import * as S from "./style";
-import useModal from "../../hooks/useModal";
-import { useState } from "react";
 
 const AddFriendsModal = () => {
   const { closeModal } = useModal();

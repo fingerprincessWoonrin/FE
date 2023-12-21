@@ -1,5 +1,3 @@
-import React from "react";
-
 interface ProfileProps {
   width: string;
   height: string;
